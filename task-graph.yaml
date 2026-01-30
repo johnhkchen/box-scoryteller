@@ -1,0 +1,36 @@
+version: "1.0"
+last_updated: "2026-01-30"
+milestones:
+  - id: M1
+    title: Concept Defined
+    description: We know what we're building and why
+    status: pending
+  - id: M2
+    title: Foundation Ready
+    description: Technical infrastructure is in place
+    status: pending
+  - id: M3
+    title: MVP Complete
+    description: Core user journey works end-to-end
+    status: pending
+stories:
+  - id: S-001
+    title: Project Ideation & Specification
+    description: Define what we're building. This is the design phase where we establish the project concept, technical approach, and user experience before writing any implementation code.
+    status: ready
+    priority: 1
+    path: docs/active/stories/S-001-ideation.md
+nodes: []
+edges: []
+meta:
+  total_stories: 1
+  total_tasks: 0
+  total_milestones: 3
+  by_status:
+    ready: 0
+    pending: 0
+    in_progress: 0
+    complete: 0
+    blocked: 0
+  by_priority: {}
+  by_milestone: {}
