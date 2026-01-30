@@ -8,6 +8,9 @@ node_modules
 /.svelte-kit
 /build
 
+# BAML Generated Code
+/baml_client
+
 # OS
 .DS_Store
 Thumbs.db

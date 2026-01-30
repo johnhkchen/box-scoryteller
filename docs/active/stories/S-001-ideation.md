@@ -1,26 +1,36 @@
 ---
 id: S-001
 title: Project Ideation & Specification
-status: ready
+status: complete
 priority: 1
 ---
 
 ## Objective
 
-Define what we're building. This is the design phase where we establish the project concept, technical approach, and user experience before writing any implementation code.
+Define what we're building. This story covers the design phase where we establish the project concept, technical approach, and user experience before writing any implementation code.
 
 ## Context
 
-We're starting from a clean chassis template and need to establish the project vision. The design phase should explore possibilities, evaluate constraints, and arrive at a clear specification that guides implementation.
+Box Scoryteller transforms box score data into compelling sports content. Sports information directors face a recurring challenge: identifying engaging narratives within game statistics and producing quality content under time pressure. This tool uses specialized AI agents tuned to different sports to surface story angles and draft content across multiple formats.
 
-## Key Questions to Answer
+## Deliverables
 
-What problem are we solving? Who is the target user and what value do they get? What makes this project compelling? What is the minimum viable product we can build in the available timeframe?
+The specification document at `docs/specification.md` describes the full project vision including the problem statement, proposed solution with specialist agents and engagement triggers, technical architecture, and scope boundaries for MVP. The happy path document at `docs/happy_path.md` walks through a realistic user session demonstrating core value propositions.
+
+## Key Decisions
+
+**Target user**: Sports information directors at universities and athletic organizations who need to produce content quickly post-game.
+
+**Core value**: Intelligent first drafts and surfaced insights that accelerate workflow, not fully automated content. The human remains editor-in-chief.
+
+**MVP scope**: Basketball specialist only, with manual box score input, conversational interface, and three output formats (recap, social post, headline).
+
+**Multi-sport architecture**: The specialist pattern supports adding baseball, football, and other sports post-MVP, each with sport-specific trigger definitions and narrative templates.
 
 ## Acceptance Criteria
 
-We have a clear specification that describes what we're building and why. The specification includes a problem statement, proposed solution, and technical approach. We have documented the core user journey showing how someone would experience the primary value. The project has an identity with a name and clear positioning.
-
-## Approach
-
-Start with open exploration of ideas and constraints. Research relevant technologies and evaluate what's possible. Converge on a specific concept and validate its feasibility. Document the specification and happy path so implementation can proceed with clarity.
+All criteria are met:
+- Specification document exists with problem statement, solution, and technical approach
+- Happy path document shows realistic user journey with clear value demonstration
+- Project identity established (Box Scoryteller)
+- Scope boundaries clear between MVP and future work

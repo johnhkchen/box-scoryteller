@@ -4,33 +4,115 @@ milestones:
   - id: M1
     title: Concept Defined
     description: We know what we're building and why
-    status: pending
+    status: complete
   - id: M2
-    title: Foundation Ready
-    description: Technical infrastructure is in place
+    title: Pipeline Foundation
+    description: BAML project with working box score parsing
     status: pending
   - id: M3
-    title: MVP Complete
-    description: Core user journey works end-to-end
+    title: Specialist Prompts
+    description: Trigger detection, interviewing, and synthesis working
     status: pending
 stories:
   - id: S-001
     title: Project Ideation & Specification
-    description: Define what we're building. This is the design phase where we establish the project concept, technical approach, and user experience before writing any implementation code.
-    status: ready
+    description: Define what we're building — the interviewer-publicist concept, BAML pipeline approach, and target user experience.
+    status: complete
     priority: 1
     path: docs/active/stories/S-001-ideation.md
-nodes: []
-edges: []
+  - id: S-002
+    title: BAML Pipeline Foundation
+    description: Set up BAML project structure, define box score types, and implement parsing function.
+    status: ready
+    priority: 1
+    path: docs/active/stories/S-002-foundation.md
+    depends_on:
+      - S-001
+  - id: S-003
+    title: Basketball Specialist Prompts
+    description: Build trigger detection, context interviewing, and narrative synthesis functions.
+    status: pending
+    priority: 2
+    path: docs/active/stories/S-003-basketball-specialist.md
+    depends_on:
+      - S-002
+nodes:
+  - id: T-002-01
+    title: BAML Project Setup
+    story: S-002
+    status: complete
+    priority: 1
+    path: docs/active/tickets/T-002-01-baml-setup.md
+    depends_on: []
+    claimed_at: "2026-01-30T21:18:22.364Z"
+    completed_at: "2026-01-30T21:20:48.000Z"
+  - id: T-002-02
+    title: Box Score Types
+    story: S-002
+    status: ready
+    priority: 1
+    path: docs/active/tickets/T-002-02-boxscore-types.md
+    depends_on:
+      - T-002-01
+  - id: T-002-03
+    title: Box Score Parser
+    story: S-002
+    status: pending
+    priority: 1
+    path: docs/active/tickets/T-002-03-boxscore-parser.md
+    depends_on:
+      - T-002-02
+  - id: T-003-01
+    title: Trigger Detection
+    story: S-003
+    status: pending
+    priority: 2
+    path: docs/active/tickets/T-003-01-trigger-detection.md
+    depends_on:
+      - T-002-03
+  - id: T-003-02
+    title: Context Interview
+    story: S-003
+    status: pending
+    priority: 2
+    path: docs/active/tickets/T-003-02-context-interview.md
+    depends_on:
+      - T-002-03
+  - id: T-003-03
+    title: Narrative Synthesis
+    story: S-003
+    status: pending
+    priority: 2
+    path: docs/active/tickets/T-003-03-narrative-synthesis.md
+    depends_on:
+      - T-003-01
+      - T-003-02
+edges:
+  - from: T-002-01
+    to: T-002-02
+  - from: T-002-02
+    to: T-002-03
+  - from: T-002-03
+    to: T-003-01
+  - from: T-002-03
+    to: T-003-02
+  - from: T-003-01
+    to: T-003-03
+  - from: T-003-02
+    to: T-003-03
 meta:
-  total_stories: 1
-  total_tasks: 0
+  total_stories: 3
+  total_tasks: 6
   total_milestones: 3
   by_status:
-    ready: 0
-    pending: 0
+    ready: 1
+    pending: 4
     in_progress: 0
-    complete: 0
+    complete: 1
     blocked: 0
-  by_priority: {}
-  by_milestone: {}
+  by_priority:
+    "1": 3
+    "2": 3
+  by_milestone:
+    M2: 3
+    M3: 3

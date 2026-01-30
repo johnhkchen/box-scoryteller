@@ -1,6 +1,6 @@
 # Project Roadmap
 
-> **Last Updated**: 2026-01-29
+> **Last Updated**: 2026-01-30
 
 This document tracks project status and progress.
 
@@ -8,31 +8,44 @@ This document tracks project status and progress.
 
 ## Current Phase
 
-**Phase: Ideation** - S-001 (Project Ideation & Specification)
+**Phase: Foundation** - S-002 (BAML Pipeline Foundation)
 
-We are in the design phase, figuring out what we're building. No implementation should happen until the design is clear.
+We've defined what we're building: an interviewer-publicist tool that helps sports information directors surface narratives from box score data. The concept, specification, and target user experience are documented. Now we're setting up the BAML pipeline to prove the core prompt engineering works.
+
+### Completed Work
+
+**S-001: Project Ideation & Specification** - Status: Complete
+
+The specification at `docs/specification.md` defines the interviewer-publicist concept, the BAML pipeline approach, and scope boundaries. The happy path at `docs/happy_path.md` shows the target interaction pattern — the specialist interviews for context, analyzes data through that lens, and surfaces narrative angles.
+
+Key decisions: Focus on the prompt pipeline first (BAML), defer UI to Lovable generation later. The specialist acts as a thinking partner, not a content generator. Basketball first, multi-sport architecture later.
 
 ### Active Work
 
-**S-001: Project Ideation & Specification** - Status: Ready
+**S-002: BAML Pipeline Foundation** - Status: In Progress
 
-The immediate focus is defining the project concept, understanding constraints, and documenting what we intend to build. This includes exploring possibilities, researching technical options, and converging on a specific idea with a clear specification and user journey.
+Set up BAML tooling, define box score types, and implement a parser that extracts structured data from raw box score text. This is prerequisite work for the specialist prompts.
 
-Once S-001 is complete, we'll have a specification document that describes the project, a happy path showing the core user experience, and enough technical clarity to begin implementation.
+Tickets:
+- T-002-01: BAML Project Setup ✓ Complete
+- T-002-02: Box Score Types (ready for work)
+- T-002-03: Box Score Parser (pending T-002-02)
 
-### Future Work
+Progress: BAML project initialized with TypeScript integration working. The toolchain generates type-safe clients from BAML definitions, and the test infrastructure is in place. API clients are configured for Claude models (Sonnet 4, Opus 4, Haiku). Documentation and example tests demonstrate the full pipeline. Ready to define domain-specific box score types.
 
-**S-002: Technical Foundation** - Status: Pending S-001
+### Upcoming Work
 
-After the design is finalized, S-002 will establish the technical foundation needed to implement the specification. The exact scope will be determined based on what S-001 defines.
+**S-003: Basketball Specialist Prompts** - Status: Pending S-002
+
+Build the trigger detection, context interviewing, and narrative synthesis functions. This is the core value — proving the prompts produce useful output.
 
 ---
 
 ## Milestones
 
-- **M1: Concept Defined** - We know what we're building and why
-- **M2: Foundation Ready** - Technical infrastructure is in place
-- **M3: MVP Complete** - Core user journey works end-to-end
+- **M1: Concept Defined** - Complete. We know what we're building and why.
+- **M2: Pipeline Foundation** - BAML project with working box score parsing.
+- **M3: Specialist Prompts** - Trigger detection, interviewing, and synthesis working.
 
 ---
 
@@ -50,15 +63,8 @@ just prompt
 
 **Run autonomous loop**:
 ```bash
-RALPH_ALLOW_MAIN=1 WORKTREE_STORY=S-001 just ralph
+RALPH_ALLOW_MAIN=1 WORKTREE_STORY=S-002 just ralph
 ```
-
-**Refresh DAG from tickets**:
-```bash
-just dag-refresh
-```
-
-See `docs/knowledge/playbook/ralph-loop.md` for detailed ralph loop instructions.
 
 ---
 
