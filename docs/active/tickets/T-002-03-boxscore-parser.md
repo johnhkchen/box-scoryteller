@@ -2,7 +2,7 @@
 id: T-002-03
 title: Box Score Parser
 story: S-002
-status: pending
+status: complete
 priority: 1
 complexity: M
 type: implementation

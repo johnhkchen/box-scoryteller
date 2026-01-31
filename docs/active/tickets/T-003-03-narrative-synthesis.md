@@ -2,13 +2,14 @@
 id: T-003-03
 title: Narrative Synthesis
 story: S-003
-status: pending
+status: complete
 priority: 2
 complexity: M
 type: implementation
 depends_on:
   - T-003-01
   - T-003-02
+completed_at: "2026-01-30"
 ---
 
 ## Objective

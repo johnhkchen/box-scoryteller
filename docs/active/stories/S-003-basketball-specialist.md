@@ -1,10 +1,11 @@
 ---
 id: S-003
 title: Basketball Specialist Prompts
-status: pending
+status: complete
 priority: 2
 depends_on:
   - S-002
+completed_at: "2026-01-30"
 ---
 
 ## Objective

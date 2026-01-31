@@ -1,7 +1,7 @@
 ---
 id: S-002
 title: BAML Pipeline Foundation
-status: ready
+status: complete
 priority: 1
 depends_on:
   - S-001

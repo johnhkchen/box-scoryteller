@@ -2,12 +2,13 @@
 id: T-003-01
 title: Trigger Detection
 story: S-003
-status: pending
+status: complete
 priority: 2
 complexity: M
 type: implementation
 depends_on:
   - T-002-03
+completed_at: "2026-01-30"
 ---
 
 ## Objective
@@ -43,3 +44,21 @@ Start with a focused set of triggers rather than trying to catch everything. We 
 ## Acceptance Criteria
 
 Given a box score with clear trigger conditions (e.g., a 30-point game), the function identifies them. Triggers include actionable follow-up questions. Output is ranked by relevance. Tests verify detection across trigger categories.
+
+## Implementation Summary
+
+Implemented the `DetectTriggers` BAML function in `baml_src/boxscore.baml` with complete type definitions and comprehensive basketball domain knowledge encoded in the prompt. The function analyzes parsed box score data and returns a ranked list of engagement triggers.
+
+### Key Components
+
+**Type Definitions**: Created `TriggerCategory` enum with five categories (STATISTICAL_EXTREME, CLUTCH_MOMENT, UNEXPECTED_PERFORMANCE, ANOMALY, TREND), `Trigger` class with all required fields including category, description, player name, key statistics map, follow-up question, and salience score, and `TriggerList` wrapper class for the function output.
+
+**Domain Knowledge Encoding**: The prompt includes detailed thresholds for notable performances across scoring (25+ strong, 30+ exceptional), rebounding (10+ double-double, 15+ dominant), assists (8+ excellent, 10+ exceptional), shooting efficiency (60%+ FG hot, 50%+ 3PT excellent), clean performance patterns (zero turnovers with high usage), and defensive impact (3+ steals, 4+ blocks). It also covers bench production patterns, statistical anomalies (guard with zero assists, big with high assists), and team-level patterns (free throw disparities, rebounding gaps, balanced vs isolated scoring).
+
+**Testing**: Added comprehensive test case `detect_triggers` using the same sample game from the parsing tests. The test successfully identifies six high-quality triggers including exceptional free throw performance (Sarah Chen's 16/18 FT), efficient bench production (Jordan Mills' 18 points on 77.8% shooting), team-level disparities (massive FT attempt gap), double-doubles, unusual scoring distributions, and strategic mismatches. All triggers include appropriate categories, clear descriptions, specific statistics, thoughtful follow-up questions, and salience scores ranging from 0.68 to 0.95.
+
+### Test Results
+
+The function correctly detected the bench player outscoring starters, the unusual free throw reliance by the top scorer, the rebounding dominance despite the loss, and the free throw attempt disparity that could indicate either aggressive play or officiating concerns. Each trigger includes an actionable follow-up question that would help an SID dig into the narrative context behind the numbers.
+
+Location: `baml_src/boxscore.baml:143-286`

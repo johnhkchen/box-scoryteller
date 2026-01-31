@@ -2,7 +2,7 @@
 id: T-002-01
 title: BAML Project Setup
 story: S-002
-status: ready
+status: complete
 priority: 1
 complexity: S
 type: setup

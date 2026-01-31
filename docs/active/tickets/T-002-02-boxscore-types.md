@@ -2,7 +2,7 @@
 id: T-002-02
 title: Box Score Types
 story: S-002
-status: pending
+status: complete
 priority: 1
 complexity: S
 type: implementation

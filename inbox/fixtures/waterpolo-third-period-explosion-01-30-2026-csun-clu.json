@@ -1,0 +1,645 @@
+{
+  "metadata": {
+    "fixture_id": "waterpolo-third-period-explosion-01-30-2026-csun-clu",
+    "sport": "wwaterpolo",
+    "tags": [
+      "third-period-explosion",
+      "balanced-attack",
+      "hat-tricks",
+      "sprint-dominance"
+    ],
+    "notes": "CSUN dominates CLU with explosive 7-goal third period. Three hat trick scorers, complete sprint control (4-0), balanced offensive attack.",
+    "source_file": "inbox/Women's Water Polo vs CSUN on 1_30_2026 - Box Score - California Lutheran University.html",
+    "trigger_count": 7,
+    "top_triggers": [
+      {
+        "category": "STATISTICAL_EXTREME",
+        "description": "Aleaha Gonzalez scored 4 goals on just 5 shots for an exceptional 80% shooting efficiency, accounting for 80% of CLU's total offense in a challenging game",
+        "salience": 0.95
+      },
+      {
+        "category": "UNEXPECTED_PERFORMANCE",
+        "description": "Lauren Lohmeier recorded 2 assists without taking a single shot, showing pure playmaking focus and court vision",
+        "salience": 0.85
+      },
+      {
+        "category": "STATISTICAL_EXTREME",
+        "description": "CSUN dominated the sprint category 4-0, showing superior conditioning and speed advantages throughout the game",
+        "salience": 0.8
+      }
+    ],
+    "story_signals": {
+      "is_close_game": false,
+      "is_overtime": false,
+      "has_standout_performance": true,
+      "is_conference_game": false,
+      "margin": 8,
+      "standout_count": 6,
+      "priority_score": 2,
+      "signal_reasons": [
+        "5 standout field player performances",
+        "Standout goalkeeper: de Souza, Izzy (10 saves)"
+      ],
+      "tier": "medium"
+    },
+    "created_at": "2026-01-31T01:24:46.804Z"
+  },
+  "box_score": {
+    "metadata": {
+      "date": "1/30/2026",
+      "venue": "Samuelson Aquatics Center",
+      "home_team": "CLU",
+      "away_team": "CSUN",
+      "home_score": 5,
+      "away_score": 13,
+      "periods": 4,
+      "game_type": null,
+      "attendance": null
+    },
+    "home_team": {
+      "team_name": "CLU",
+      "goals": 5,
+      "shots": 22,
+      "assists": 4,
+      "points": 9,
+      "exclusions": 13,
+      "drawn_exclusions": 7,
+      "steals": 13,
+      "field_blocks": 1,
+      "sprints": "0-4",
+      "players": [
+        {
+          "name": "Raquel, Sophie",
+          "number": "1A",
+          "shots": 0,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 0,
+          "drawn_exclusions": 0,
+          "steals": 1,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "de Souza, Izzy",
+          "number": "1",
+          "shots": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 0,
+          "drawn_exclusions": 0,
+          "steals": 1,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Brandon, Jacqueline",
+          "number": "2",
+          "shots": 3,
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "exclusions": 1,
+          "drawn_exclusions": 1,
+          "steals": 0,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Miller, Miranda",
+          "number": "3",
+          "shots": 0,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 0,
+          "drawn_exclusions": 0,
+          "steals": 0,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Espitia, Kelsee",
+          "number": "4",
+          "shots": 0,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 0,
+          "drawn_exclusions": 0,
+          "steals": 0,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Hurley, Olivia",
+          "number": "5",
+          "shots": 2,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 2,
+          "drawn_exclusions": 0,
+          "steals": 2,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Gillott, Gabby",
+          "number": "6",
+          "shots": 0,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 0,
+          "drawn_exclusions": 1,
+          "steals": 0,
+          "field_blocks": 1,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Clark, Reyna",
+          "number": "7",
+          "shots": 2,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 0,
+          "drawn_exclusions": 2,
+          "steals": 2,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Geier, Hudson",
+          "number": "8",
+          "shots": 1,
+          "goals": 1,
+          "assists": 1,
+          "points": 2,
+          "exclusions": 1,
+          "drawn_exclusions": 1,
+          "steals": 2,
+          "field_blocks": 0,
+          "sprints": "0-3"
+        },
+        {
+          "name": "Lee, Waileia",
+          "number": "9",
+          "shots": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 1,
+          "drawn_exclusions": 0,
+          "steals": 0,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Gonzalez, Aleaha",
+          "number": "10",
+          "shots": 5,
+          "goals": 4,
+          "assists": 0,
+          "points": 4,
+          "exclusions": 3,
+          "drawn_exclusions": 0,
+          "steals": 0,
+          "field_blocks": 0,
+          "sprints": "0-1"
+        },
+        {
+          "name": "Lohmeier, Lauren",
+          "number": "11",
+          "shots": 0,
+          "goals": 0,
+          "assists": 2,
+          "points": 2,
+          "exclusions": 1,
+          "drawn_exclusions": 0,
+          "steals": 0,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Cruz, Jocelyn",
+          "number": "13",
+          "shots": 0,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 0,
+          "drawn_exclusions": 0,
+          "steals": 0,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Gardhouse, Chloe",
+          "number": "14",
+          "shots": 2,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 1,
+          "drawn_exclusions": 0,
+          "steals": 3,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Robles, Clarisa",
+          "number": "16",
+          "shots": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 1,
+          "drawn_exclusions": 1,
+          "steals": 0,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Court, Franki",
+          "number": "21",
+          "shots": 4,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 2,
+          "drawn_exclusions": 0,
+          "steals": 2,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Favazzo, Natalie",
+          "number": "22",
+          "shots": 0,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 0,
+          "drawn_exclusions": 1,
+          "steals": 0,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        }
+      ],
+      "goalkeepers": [
+        {
+          "name": "de Souza, Izzy",
+          "number": "1",
+          "minutes": "24:00",
+          "goals_allowed": 10,
+          "saves": 10
+        },
+        {
+          "name": "Raquel, Sophie",
+          "number": "1A",
+          "minutes": "8:00",
+          "goals_allowed": 3,
+          "saves": 3
+        }
+      ]
+    },
+    "away_team": {
+      "team_name": "CSUN",
+      "goals": 13,
+      "shots": 33,
+      "assists": 7,
+      "points": 20,
+      "exclusions": 9,
+      "drawn_exclusions": 7,
+      "steals": 13,
+      "field_blocks": 1,
+      "sprints": "4-0",
+      "players": [
+        {
+          "name": "Erika Staine",
+          "number": "1A",
+          "shots": 1,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 0,
+          "drawn_exclusions": 0,
+          "steals": 1,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Mira Dravucz",
+          "number": "2",
+          "shots": 2,
+          "goals": 2,
+          "assists": 2,
+          "points": 4,
+          "exclusions": 2,
+          "drawn_exclusions": 1,
+          "steals": 0,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Marjorie Krueger",
+          "number": "3",
+          "shots": 1,
+          "goals": 1,
+          "assists": 1,
+          "points": 2,
+          "exclusions": 2,
+          "drawn_exclusions": 0,
+          "steals": 0,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Sophia Cooper",
+          "number": "4",
+          "shots": 4,
+          "goals": 3,
+          "assists": 1,
+          "points": 4,
+          "exclusions": 0,
+          "drawn_exclusions": 0,
+          "steals": 2,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Raygan Carroll",
+          "number": "5",
+          "shots": 0,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 0,
+          "drawn_exclusions": 0,
+          "steals": 0,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Ella Furuholmen",
+          "number": "6",
+          "shots": 3,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 0,
+          "drawn_exclusions": 1,
+          "steals": 0,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Kianna Melvin",
+          "number": "7",
+          "shots": 5,
+          "goals": 3,
+          "assists": 0,
+          "points": 3,
+          "exclusions": 1,
+          "drawn_exclusions": 2,
+          "steals": 1,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Jade Cuevas",
+          "number": "8",
+          "shots": 0,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 0,
+          "drawn_exclusions": 1,
+          "steals": 1,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Alexis Smith",
+          "number": "9",
+          "shots": 1,
+          "goals": 1,
+          "assists": 0,
+          "points": 1,
+          "exclusions": 0,
+          "drawn_exclusions": 0,
+          "steals": 1,
+          "field_blocks": 1,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Lucie Lapuz",
+          "number": "10",
+          "shots": 2,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 0,
+          "drawn_exclusions": 0,
+          "steals": 2,
+          "field_blocks": 0,
+          "sprints": "2-0"
+        },
+        {
+          "name": "Ashley Strickland",
+          "number": "11",
+          "shots": 4,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 2,
+          "drawn_exclusions": 0,
+          "steals": 1,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Abigel Kiss",
+          "number": "12",
+          "shots": 0,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 0,
+          "drawn_exclusions": 0,
+          "steals": 0,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Sofia Martinez",
+          "number": "13",
+          "shots": 6,
+          "goals": 2,
+          "assists": 1,
+          "points": 3,
+          "exclusions": 0,
+          "drawn_exclusions": 0,
+          "steals": 0,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Dakota Bumbaca",
+          "number": "14",
+          "shots": 0,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 0,
+          "drawn_exclusions": 0,
+          "steals": 0,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        },
+        {
+          "name": "Mackenzie Wood",
+          "number": "17",
+          "shots": 3,
+          "goals": 1,
+          "assists": 2,
+          "points": 3,
+          "exclusions": 1,
+          "drawn_exclusions": 0,
+          "steals": 3,
+          "field_blocks": 0,
+          "sprints": "1-0"
+        },
+        {
+          "name": "Claire Summers",
+          "number": "20",
+          "shots": 0,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "exclusions": 1,
+          "drawn_exclusions": 0,
+          "steals": 0,
+          "field_blocks": 0,
+          "sprints": "0-0"
+        }
+      ],
+      "goalkeepers": []
+    },
+    "period_scores": null
+  },
+  "triggers": {
+    "triggers": [
+      {
+        "category": "STATISTICAL_EXTREME",
+        "description": "Aleaha Gonzalez scored 4 goals on just 5 shots for an exceptional 80% shooting efficiency, accounting for 80% of CLU's total offense in a challenging game",
+        "player_name": "Gonzalez, Aleaha",
+        "key_stats": {
+          "goals": "4",
+          "shots": "5",
+          "shooting_percentage": "80%",
+          "team_goals_percentage": "80%"
+        },
+        "follow_up_question": "What was Gonzalez's mindset or approach that led to such clinical finishing, and how did she find scoring opportunities despite the team's struggles?",
+        "salience_score": 0.95
+      },
+      {
+        "category": "UNEXPECTED_PERFORMANCE",
+        "description": "Lauren Lohmeier recorded 2 assists without taking a single shot, showing pure playmaking focus and court vision",
+        "player_name": "Lohmeier, Lauren",
+        "key_stats": {
+          "assists": "2",
+          "shots": "0",
+          "points": "2"
+        },
+        "follow_up_question": "What was Lohmeier's role in the game plan, and how did she create scoring opportunities for teammates while staying unselfish offensively?",
+        "salience_score": 0.85
+      },
+      {
+        "category": "STATISTICAL_EXTREME",
+        "description": "CSUN dominated the sprint category 4-0, showing superior conditioning and speed advantages throughout the game",
+        "player_name": null,
+        "key_stats": {
+          "csun_sprints": "4-0",
+          "clu_sprints": "0-4",
+          "sprint_differential": "+4"
+        },
+        "follow_up_question": "How did CSUN's speed advantage translate into scoring opportunities, and what does this say about their preparation or tactical approach?",
+        "salience_score": 0.8
+      },
+      {
+        "category": "STATISTICAL_EXTREME",
+        "description": "Sophia Cooper scored a hat trick (3 goals) with perfect discipline, recording zero exclusions while maintaining high efficiency",
+        "player_name": "Sophia Cooper",
+        "key_stats": {
+          "goals": "3",
+          "shots": "4",
+          "shooting_percentage": "75%",
+          "exclusions": "0"
+        },
+        "follow_up_question": "What made Cooper so effective while staying disciplined, and how did she manage to avoid exclusions in what appeared to be a physical game?",
+        "salience_score": 0.78
+      },
+      {
+        "category": "STATISTICAL_EXTREME",
+        "description": "Chloe Gardhouse recorded 3 steals, showing exceptional defensive awareness and anticipation",
+        "player_name": "Gardhouse, Chloe",
+        "key_stats": {
+          "steals": "3",
+          "field_blocks": "1",
+          "drawn_exclusions": "1"
+        },
+        "follow_up_question": "What defensive adjustments or positioning allowed Gardhouse to be so disruptive, and how did her steals impact game momentum?",
+        "salience_score": 0.72
+      },
+      {
+        "category": "STATISTICAL_EXTREME",
+        "description": "Multiple CSUN players showed balanced offensive production with Kianna Melvin matching Cooper's 3-goal performance",
+        "player_name": "Kianna Melvin",
+        "key_stats": {
+          "goals": "3",
+          "shots": "5",
+          "shooting_percentage": "60%",
+          "drawn_exclusions": "2"
+        },
+        "follow_up_question": "How did CSUN's depth and balanced scoring create problems for CLU's defense, and what was the key to their offensive flow?",
+        "salience_score": 0.7
+      },
+      {
+        "category": "ANOMALY",
+        "description": "Reyna Clark drew 2 exclusions while taking only 2 shots, showing aggressive defensive pressure and smart positioning",
+        "player_name": "Clark, Reyna",
+        "key_stats": {
+          "drawn_exclusions": "2",
+          "shots": "2",
+          "steals": "2"
+        },
+        "follow_up_question": "What was Clark's defensive strategy that led to drawing exclusions, and how did she create power play opportunities for her team?",
+        "salience_score": 0.65
+      }
+    ]
+  },
+  "recap": {
+    "headline": "CSUN Overwhelms CLU 13-5 Behind Balanced Offensive Attack",
+    "subheadline": "Matadors dominate sprints and capitalize on disciplined play to cruise past Sea Kings",
+    "lead_paragraph": "Cal State Northridge delivered a statement performance at Samuelson Aquatics Center, dismantling CLU 13-5 in a dominant road victory. The Matadors controlled the pace from the opening sprint, winning all four center passes while spreading the wealth offensively with six different goal scorers.",
+    "body_paragraphs": [
+      "CSUN's offensive explosion was spearheaded by a trio of standout performances. Kianna Melvin led the charge with three goals on five shots, while Sophia Cooper matched her with three goals on four attempts. Mira Dravucz provided the perfect complement with two goals and two assists, orchestrating much of the Matadors' fluid attack.",
+      "The Sea Kings struggled to match CSUN's discipline and efficiency throughout the contest. While CLU managed 22 shots compared to the Matadors' 33, their conversion rate suffered as they found the back of the net just five times. Aleaha Gonzalez provided the lone bright spot for the home team, scoring four of CLU's five goals on a perfect 4-of-5 shooting performance.",
+      "Defensively, CSUN's balanced approach paid dividends. The Matadors maintained superior field position by winning the sprint battle 4-0 and played cleaner water polo, committing just nine exclusions compared to CLU's 13. This discipline allowed them to maintain consistent offensive pressure while limiting the Sea Kings' scoring opportunities.",
+      "Between the pipes, CLU's goalkeeping tandem of Izzy de Souza and Sophie Raquel combined for 13 saves but couldn't stem the tide of CSUN's relentless attack. De Souza made 10 saves in 24 minutes of action, while Raquel added three stops in limited duty."
+    ],
+    "key_stats": [
+      "CSUN dominated sprints 4-0, controlling field position throughout",
+      "Six different Matadors found the scoresheet in the balanced offensive attack",
+      "Aleaha Gonzalez scored 4 of CLU's 5 goals, converting 80% of her shots",
+      "CSUN maintained better discipline with 9 exclusions vs CLU's 13",
+      "The Matadors outshot the Sea Kings 33-22 with superior conversion rate"
+    ],
+    "player_of_the_game": "Kianna Melvin (CSUN) - Led all scorers with 3 goals while drawing 2 exclusions and adding a steal in the dominant victory"
+  }
+}

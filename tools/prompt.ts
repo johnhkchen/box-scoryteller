@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Prompt generation for Solar-Sim task management.
+ * Prompt generation for Box Story Hero task management.
  *
  * Selects the highest-priority ready task and generates a well-formed prompt
  * for Claude to execute.
@@ -500,7 +500,7 @@ function generatePrompt(graph: TaskGraph, task: Task): string {
   const acceptanceCriteria = getAcceptanceCriteria(task);
   const nextTasks = getNextTasks(graph, task);
 
-  let prompt = `You are implementing the ${task.title} for Solar-Sim.
+  let prompt = `You are implementing the ${task.title} for Box Story Hero.
 
 Read these files first:
 

@@ -31,3 +31,15 @@ vite.config.ts.timestamp-*
 # Runtime
 logs/
 .ralph/
+
+# Data inbox - raw and processed are large/reproducible, fixtures are committed
+inbox/raw/*
+!inbox/raw/.gitkeep
+inbox/processed/*
+!inbox/processed/.gitkeep
+inbox/cache.db
+inbox/cache.db-*
+
+# HTML snapshots saved directly to inbox (should go in raw/)
+inbox/*.html
+inbox/*_files/

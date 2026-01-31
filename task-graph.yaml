@@ -14,105 +14,233 @@ milestones:
     description: Trigger detection, interviewing, and synthesis working
     status: pending
 stories:
+  - id: S-003
+    title: Basketball Specialist Prompts
+    description: Build the BAML functions that power the basketball specialist's analysis and interviewing capabilities. This is the core prompt engineering work that determines whether the tool provides value.
+    status: complete
+    priority: 2
+    path: docs/active/stories/S-003-basketball-specialist.md
+  - id: S-005
+    title: Story Priority and Institutional Voice
+    description: |-
+      The specialist pipeline (S-003) produces triggers, context interviews, and narrative angles. But when an SID has five games on a single night, every game gets treated equally — same depth of analysis, same effort in the prompt. The system lacks a sense of "what matters tonight" and doesn't reflect the specific voice of the athletic department producing the content.
+
+      This story addresses two gaps: helping SIDs see which games deserve attention before writing starts, and injecting institutional voice so outputs feel like they came from this program, not a generic sports AI.
+    status: complete
+    priority: 2
+    path: docs/active/stories/S-005-story-priority-voice.md
+  - id: S-004
+    title: Box Score Data Pipeline
+    description: Build an ingestion pipeline that collects and stores a year's worth of basketball box score data for testing and development. This provides realistic test data for the specialist prompts and ensures the parsing and analysis functions work across diverse game scenarios.
+    status: complete
+    priority: 2
+    path: docs/active/stories/S-004-data-pipeline.md
   - id: S-001
     title: Project Ideation & Specification
-    description: Define what we're building — the interviewer-publicist concept, BAML pipeline approach, and target user experience.
-    status: complete
+    description: Define what we're building. This story covers the design phase where we establish the project concept, technical approach, and user experience before writing any implementation code.
+    status: pending
     priority: 1
     path: docs/active/stories/S-001-ideation.md
   - id: S-002
     title: BAML Pipeline Foundation
-    description: Set up BAML project structure, define box score types, and implement parsing function.
-    status: ready
-    priority: 1
-    path: docs/active/stories/S-002-foundation.md
-    depends_on:
-      - S-001
-  - id: S-003
-    title: Basketball Specialist Prompts
-    description: Build trigger detection, context interviewing, and narrative synthesis functions.
-    status: pending
-    priority: 2
-    path: docs/active/stories/S-003-basketball-specialist.md
-    depends_on:
-      - S-002
-nodes:
-  - id: T-002-01
-    title: BAML Project Setup
-    story: S-002
+    description: Set up the BAML project structure and prove we can parse box scores into structured data. This establishes the foundation for the prompt pipeline without building any UI.
     status: complete
     priority: 1
-    path: docs/active/tickets/T-002-01-baml-setup.md
-    depends_on: []
-    claimed_at: "2026-01-30T21:18:22.364Z"
-    completed_at: "2026-01-30T21:20:48.000Z"
-  - id: T-002-02
-    title: Box Score Types
-    story: S-002
-    status: ready
-    priority: 1
-    path: docs/active/tickets/T-002-02-boxscore-types.md
-    depends_on:
-      - T-002-01
-  - id: T-002-03
-    title: Box Score Parser
-    story: S-002
-    status: pending
-    priority: 1
-    path: docs/active/tickets/T-002-03-boxscore-parser.md
-    depends_on:
-      - T-002-02
-  - id: T-003-01
-    title: Trigger Detection
-    story: S-003
-    status: pending
+    path: docs/active/stories/S-002-foundation.md
+nodes:
+  - id: T-005-05
+    title: Priority-Aware Narrative Synthesis
+    story: S-005
+    description: Connect story priority to narrative synthesis so high-priority games receive deeper treatment and low-priority games get concise coverage. This closes the loop between ranking and output quality.
     priority: 2
-    path: docs/active/tickets/T-003-01-trigger-detection.md
-    depends_on:
-      - T-002-03
+    complexity: S
+    status: complete
+    assignee: null
+    path: docs/active/tickets/T-005-05-priority-aware-synthesis.md
+    completed_at: "2026-01-30"
+  - id: T-004-04
+    title: Fixture Extraction
+    story: S-004
+    description: Build tooling to promote interesting games from processed data into test fixtures. This creates a curated set of examples that demonstrate different trigger categories for prompt testing.
+    priority: 2
+    complexity: S
+    status: complete
+    assignee: null
+    completed_at: "2026-01-30"
+    path: docs/active/tickets/T-004-04-fixture-extraction.md
   - id: T-003-02
     title: Context Interview
     story: S-003
-    status: pending
+    description: Implement BAML functions that generate interview questions to surface narrative context. This is the "interviewer" half of the interviewer-publicist dynamic.
     priority: 2
+    complexity: M
+    status: complete
+    assignee: null
+    completed_at: "2026-01-30"
     path: docs/active/tickets/T-003-02-context-interview.md
-    depends_on:
-      - T-002-03
+  - id: T-005-01
+    title: Story Signals Extraction
+    story: S-005
+    description: Implement a function that extracts simple boolean and numeric signals from a box score to enable game-level prioritization. This is a lightweight first pass that runs before deeper analysis.
+    priority: 2
+    complexity: S
+    status: complete
+    assignee: null
+    path: docs/active/tickets/T-005-01-story-signals.md
+    completed_at: "2026-01-30"
+  - id: T-005-02
+    title: Multi-Game Priority Ranking
+    story: S-005
+    description: Implement a function that takes multiple games with their story signals and produces a ranked list with priority tiers. This helps SIDs see "what matters tonight" before any deep analysis begins.
+    priority: 2
+    complexity: S
+    status: complete
+    assignee: null
+    path: docs/active/tickets/T-005-02-priority-ranking.md
+    completed_at: "2026-01-30"
+  - id: T-004-03
+    title: Box Score Normalization
+    story: S-004
+    description: Create a normalization pipeline that converts raw fetched data into our canonical BoxScore structure. This validates that our types work with real-world data and produces the processed data used for testing.
+    priority: 2
+    complexity: M
+    status: complete
+    assignee: null
+    completed_at: 2026-01-30T00:00:00.000Z
+    path: docs/active/tickets/T-004-03-normalization.md
+  - id: T-002-02
+    title: Box Score Types
+    story: S-002
+    description: Define BAML types for basketball box score data. These types structure what the parser extracts and what downstream functions consume.
+    priority: 1
+    complexity: S
+    status: complete
+    assignee: null
+    path: docs/active/tickets/T-002-02-boxscore-types.md
+  - id: T-005-03
+    title: Voice Profile Loading
+    story: S-005
+    description: Implement a function that loads and optionally parses voice profile markdown files. This enables the narrative synthesis prompt to receive program-specific voice configuration.
+    priority: 2
+    complexity: S
+    status: complete
+    assignee: null
+    path: docs/active/tickets/T-005-03-voice-interview.md
+    completed_at: "2026-01-30"
   - id: T-003-03
     title: Narrative Synthesis
     story: S-003
-    status: pending
+    description: Implement a BAML function that synthesizes narrative observations from triggers, context, and box score data. This is where the "publicist" aspect emerges — helping the SID see story angles they might pursue.
     priority: 2
+    complexity: M
+    status: complete
+    assignee: null
+    completed_at: "2026-01-30"
     path: docs/active/tickets/T-003-03-narrative-synthesis.md
-    depends_on:
-      - T-003-01
-      - T-003-02
+  - id: T-002-03
+    title: Box Score Parser
+    story: S-002
+    description: Implement a BAML function that takes raw box score text and returns structured BoxScore data. This is the entry point for the pipeline — everything else depends on reliable parsing.
+    priority: 1
+    complexity: M
+    status: complete
+    assignee: null
+    path: docs/active/tickets/T-002-03-boxscore-parser.md
+  - id: T-004-01
+    title: Inbox Directory Structure
+    story: S-004
+    description: Set up the directory structure for box score data ingestion. This establishes conventions for raw data, processed data, and test fixtures that the rest of the pipeline will use.
+    priority: 2
+    complexity: S
+    status: complete
+    assignee: null
+    completed_at: "2026-01-30"
+    path: docs/active/tickets/T-004-01-inbox-structure.md
+  - id: T-005-04
+    title: Voice Profile Injection in Narrative Synthesis
+    story: S-005
+    description: Modify the narrative synthesis prompt to accept and use voice profile content. Outputs should reflect the program's personality, audience priorities, terminology preferences, and storytelling style.
+    priority: 2
+    complexity: M
+    status: complete
+    assignee: null
+    path: docs/active/tickets/T-005-04-voice-injection.md
+    completed_at: "2026-01-30"
+  - id: T-004-02
+    title: Data Source Integration
+    story: S-004
+    description: Implement a fetcher that can pull box score data from a basketball statistics source. This provides the raw material for testing the specialist prompts against real game data.
+    priority: 2
+    complexity: M
+    status: complete
+    assignee: null
+    completed_at: "2026-01-30"
+    path: docs/active/tickets/T-004-02-data-source.md
+  - id: T-003-01
+    title: Trigger Detection
+    story: S-003
+    description: Implement a BAML function that analyzes parsed box score data and identifies engagement triggers — statistical patterns that suggest story potential.
+    priority: 2
+    complexity: M
+    status: complete
+    assignee: null
+    completed_at: "2026-01-30"
+    path: docs/active/tickets/T-003-01-trigger-detection.md
+  - id: T-002-01
+    title: BAML Project Setup
+    story: S-002
+    description: Initialize a BAML project with TypeScript integration and verify the toolchain works. This is prerequisite work before defining domain types or prompts.
+    priority: 1
+    complexity: S
+    status: complete
+    assignee: null
+    path: docs/active/tickets/T-002-01-baml-setup.md
 edges:
-  - from: T-002-01
-    to: T-002-02
-  - from: T-002-02
-    to: T-002-03
-  - from: T-002-03
-    to: T-003-01
+  - from: T-005-02
+    to: T-005-05
+  - from: T-005-04
+    to: T-005-05
+  - from: T-004-03
+    to: T-004-04
+  - from: T-003-01
+    to: T-004-04
   - from: T-002-03
     to: T-003-02
+  - from: T-003-01
+    to: T-005-01
+  - from: T-005-01
+    to: T-005-02
+  - from: T-004-02
+    to: T-004-03
+  - from: T-002-02
+    to: T-004-03
+  - from: T-002-01
+    to: T-002-02
   - from: T-003-01
     to: T-003-03
   - from: T-003-02
     to: T-003-03
+  - from: T-002-02
+    to: T-002-03
+  - from: T-005-03
+    to: T-005-04
+  - from: T-003-03
+    to: T-005-04
+  - from: T-004-01
+    to: T-004-02
+  - from: T-002-03
+    to: T-003-01
 meta:
-  total_stories: 3
-  total_tasks: 6
+  total_stories: 5
+  total_tasks: 15
   total_milestones: 3
   by_status:
-    ready: 1
-    pending: 4
+    ready: 0
+    pending: 0
     in_progress: 0
-    complete: 1
+    complete: 15
     blocked: 0
   by_priority:
     "1": 3
-    "2": 3
-  by_milestone:
-    M2: 3
-    M3: 3
+    "2": 12
+  by_milestone: {}
